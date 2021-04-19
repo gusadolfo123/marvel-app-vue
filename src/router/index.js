@@ -5,6 +5,7 @@ import DcPage from "../views/DcPage.vue";
 import SearchPage from "../views/SearchPage.vue";
 import LoginPage from "../views/LoginPage.vue";
 import Dashboard from "../views/Dashboard.vue";
+import HeroPage from "../views/HeroPage.vue";
 import store from "../store";
 
 Vue.use(VueRouter);
@@ -50,6 +51,14 @@ const routes = [
       {
         path: "/search",
         component: SearchPage,
+      },
+      {
+        path: "/heroe/:id",
+        component: HeroPage,
+      },
+      {
+        path: "**",
+        redirect: "/marvel",
       },
     ],
   },
